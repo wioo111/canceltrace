@@ -56,7 +56,8 @@ def _constant(value: str) -> None:
 def _identifier(value: Any, field_name: str, line: int) -> None:
     if not isinstance(value, str) or not 1 <= len(value) <= 128 or not value.strip():
         raise TraceError(line, f"{field_name} must be a nonblank string of 1–128 characters")
-    if any(ord(char) < 32 or 0xD800 <= ord(char) <= 0xDFFF for char in value):
+    if any(ord(char) < 32 or 0x7F <= ord(char) <= 0x9F
+           or 0xD800 <= ord(char) <= 0xDFFF for char in value):
         raise TraceError(line, f"{field_name} contains a control character or invalid Unicode")
 
 

@@ -4,7 +4,7 @@ import sys
 import unittest
 from pathlib import Path
 
-from canceltrace import MAX_BYTES, MAX_DIAGNOSTIC_IDS, MAX_LINE_BYTES, TraceError, analyze
+from canceltrace import MAX_BYTES, MAX_DIAGNOSTIC_IDS, MAX_LINE_BYTES, TraceError, analyze, parse_trace
 
 
 def record(kind, event_id, operation_key="op", **fields):
@@ -205,6 +205,27 @@ class ValidationTests(unittest.TestCase):
             with self.subTest(event=event), self.assertRaises(TraceError):
                 run(event)
 
+    def test_identifiers_reject_all_unicode_control_characters(self):
+        # Parse a structurally valid event in isolation: invalid identifiers must
+        # fail validation, not merely fail later attempt/operation correlation.
+        for codepoint in (*range(0x20), *range(0x7F, 0xA0)):
+            for field in ("event_id", "operation_key", "attempt_id", "evidence_id", "effect_id"):
+                for escaped in (True, False):
+                    event = dict(outcome(), **{field: "left" + chr(codepoint) + "right"})
+                    data = json.dumps(event, ensure_ascii=escaped).encode("utf-8")
+                    with self.subTest(codepoint=codepoint, field=field, escaped=escaped):
+                        with self.assertRaisesRegex(TraceError, field + " contains a control"):
+                            parse_trace(data)
+
+    def test_identifiers_preserve_valid_non_ascii_and_control_range_boundaries(self):
+        for value in ("left~right", "left\u00a0right", "café", "操作", "effect-😀", "e\u0301"):
+            for field in ("event_id", "operation_key", "attempt_id", "evidence_id", "effect_id"):
+                event = dict(outcome(), **{field: value})
+                for escaped in (True, False):
+                    with self.subTest(value=value, field=field, escaped=escaped):
+                        data = json.dumps(event, ensure_ascii=escaped).encode("utf-8")
+                        self.assertEqual(parse_trace(data)[0][1][field], value)
+
     def test_confirmation_requires_evidence_and_effect_ids(self):
         for missing in ("evidence_id", "effect_id"):
             event = outcome()
@@ -256,6 +277,18 @@ class CLITests(unittest.TestCase):
         self.assertEqual(result.returncode, 2)
         self.assertNotIn("findings", payload)
         self.assertNotIn("operations", payload)
+
+    def test_del_and_c1_identifiers_are_data_errors_not_partial_reports(self):
+        for codepoint in (0x7F, 0x85, 0x9B):
+            for escaped in (True, False):
+                event = dict(dispatch(), operation_key="left" + chr(codepoint) + "right")
+                with self.subTest(codepoint=codepoint, escaped=escaped):
+                    result = self.invoke(json.dumps(event, ensure_ascii=escaped).encode(), "--format", "json")
+                    payload = json.loads(result.stdout)
+                    self.assertEqual(result.returncode, 2)
+                    self.assertEqual(payload["status"], "data_error")
+                    self.assertNotIn("findings", payload)
+                    self.assertNotIn("operations", payload)
 
     def test_terminal_control_in_unknown_key_is_escaped(self):
         event = dict(dispatch())

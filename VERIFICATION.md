@@ -107,3 +107,46 @@ This is a local offline verification result, not a remote CI pass or real-servic
 integration result. No CI workflow is supplied by this import. Distribution
 license selection remains pending; public visibility alone does not establish an
 open-source license.
+
+## Identifier control-range correction (2026-10-30 UTC)
+
+A focused check at commit `d52943fe9f070a55d86020103808f1dac48959c6`
+confirmed that the documented ban on control characters was incomplete:
+identifiers containing DEL or C1 characters were accepted. For example,
+`left\u0085right` was accepted, although U+0085 alone was already rejected by
+the separate nonblank check. C0 controls and surrogate code points were already
+rejected. This is an input-contract defect; the existing text/JSON escaping
+remains in place, and no terminal-injection exploit is claimed.
+
+The correction rejects U+007F–U+009F in all five identifier fields. It intentionally
+tightens validation of previously accepted, out-of-contract inputs; valid Unicode
+identifiers are not restricted to ASCII or normalized. Business state transitions,
+report schema version 2 and protocol classification are unchanged.
+
+Three new test methods exercise all 65 Unicode `Cc` code points across five
+identifier fields with JSON `ensure_ascii` enabled and disabled (650 parser
+subcases; C0 still requires JSON escaping in either mode),
+60 valid Unicode/boundary subcases, and six DEL/C1 CLI cases. Parser checks call
+`parse_trace` so a later unknown-attempt error cannot falsely satisfy a validation
+test. Before the fix these tests produced 336 expected failures and zero errors
+(330 parser cases and six CLI cases); after it they all pass. CLI rejection
+returns exit 2 and `data_error` without a partial result.
+
+Full verification on Python 3.12.14:
+
+```sh
+python3 -m unittest discover -v
+python3 -m py_compile canceltrace.py mcp_boundary.py test_canceltrace.py test_mcp_boundary.py test_state_space.py
+```
+
+Result: **79 test methods passed in 1.697 seconds**; compilation of all five
+modules passed. The previous 5,856 bounded state-space cases are included and
+unchanged. `STATE_SPACE_VALIDATION.json` remains the dated, historical pre-fix
+validation record, not a claim about the new runtime hash.
+
+The separate trace with an untracked write, a final no-effect receipt, a grant,
+and a tracked write was also reproduced: it reports `no_findings` with final
+authorization state `active`. This is not proof of the earlier write's authority.
+README now explicitly documents that the operation summary does not retain
+per-attempt authorization history; no authorization semantics or report fields
+were changed. These are synthetic local checks, not live-service or CI results.

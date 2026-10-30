@@ -1,0 +1,17 @@
+{
+  "jsonrpc": "2.0",
+  "id": "synthetic-poll-1",
+  "result": {
+    "resultType": "complete",
+    "taskId": "synthetic-task",
+    "status": "completed",
+    "createdAt": "2026-01-01T00:00:00Z",
+    "lastUpdatedAt": "2026-01-01T00:00:01Z",
+    "ttlMs": 60000,
+    "result": {
+      "resultType": "complete",
+      "content": [{"type": "text", "text": "Synthetic tool error; external effect remains unspecified."}],
+      "isError": true
+    }
+  }
+}

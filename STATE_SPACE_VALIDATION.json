@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-10-29T22:44:36.151107+00:00",
+  "python_version": "3.12.14",
+  "source_kind": "original_synthetic_tests_not_production_traces",
+  "unittest_command": "python3 -m unittest discover -v",
+  "test_methods_passed": 76,
+  "duration_seconds": 1.266,
+  "new_test_methods": 7,
+  "generated_case_executions": 5856,
+  "paired_history_counterexamples": 1,
+  "py_compile": "passed for five Python modules",
+  "unchanged_from_archive_version_1": {
+    "canceltrace.py": true,
+    "mcp_boundary.py": true,
+    "test_canceltrace.py": true,
+    "test_mcp_boundary.py": true
+  },
+  "source_sha256": {
+    "canceltrace.py": "c5697f4d8132540a8ac345914c74a9de7704c0cd6552cb5604ed67c2df642f7f",
+    "mcp_boundary.py": "e809035077c9a95d8935aaa0286b8f18565a7aa6b31d1c290aa2d8979f4074b3",
+    "test_canceltrace.py": "09efbc5ccd707d704acfd8d4a3ce7eb887abfacbe8c7d65ec882861d24ea1adb",
+    "test_mcp_boundary.py": "2f9225c9c6c99a5dd773b48803f86ea784be563d5acff2549d519d138b7e1c2c",
+    "test_state_space.py": "6209ad48da6cced0716e17b1018391e650d2a8026bb05c2b189f3f210dde2e60"
+  },
+  "examples": {
+    "receipt_before_retry.synthetic.jsonl": {
+      "exit_code": 0,
+      "finding_codes": []
+    },
+    "receipt_after_retry.synthetic.jsonl": {
+      "exit_code": 1,
+      "finding_codes": [
+        "REDISPATCH_WITH_UNKNOWN_OUTCOME"
+      ]
+    }
+  },
+  "runtime_or_schema_changed": false,
+  "upstream_versions": "Existing 24 pinned file records in SOURCES.json unchanged; no upstream head refresh this round.",
+  "limits": "Bounded schedules only; not exhaustive verification, evidence authentication, real MCP interoperability, payment execution, or adapter validation."
+}

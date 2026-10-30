@@ -1,0 +1,176 @@
+{
+  "inspected_at": "2026-10-29T18:00:00Z",
+  "method": "GitHub connector, read-only",
+  "upstream_code_executed": false,
+  "sources": [
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "src/mcp/shared/jsonrpc_dispatcher.py",
+      "blob_sha": "223373da0f69df50c94a15fd970b04ad3e433192",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/src/mcp/shared/jsonrpc_dispatcher.py"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "tests/docs_src/test_cancellation.py",
+      "blob_sha": "e28cc77c113596c5ef7b9aa4502e2b8429836765",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/tests/docs_src/test_cancellation.py"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "tests/interaction/lowlevel/test_cancellation.py",
+      "blob_sha": "74c32e304b88e6a5854b6e5c949183c357a57c1d",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/tests/interaction/lowlevel/test_cancellation.py"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "tests/server/test_cancel_handling.py",
+      "blob_sha": "fd0e4b28af3fcd6cf81cf2257c26581d591480ed",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/tests/server/test_cancel_handling.py"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "docs/handlers/cancellation.md",
+      "blob_sha": "2e20ccbf6dfe6d7f785c381b909f07ff2353b8f7",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/docs/handlers/cancellation.md"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "examples/stories/tasks/README.md",
+      "blob_sha": "d1956d1e33fc13c4bdc9b0d72b875724708bbb75",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/examples/stories/tasks/README.md"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "LICENSE",
+      "blob_sha": "3d48435454b105021b4f777c11b6b07d8d2ffea3",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/LICENSE"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "docs/specification/2026-07-28/basic/patterns/cancellation.mdx",
+      "blob_sha": "b8db4c83d989bfe662eb47d74539c1cc19e4bf97",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/docs/specification/2026-07-28/basic/patterns/cancellation.mdx"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "docs/extensions/tasks/overview.mdx",
+      "blob_sha": "323ef4abdb885e6a634ec06721203ea34b684ba8",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/docs/extensions/tasks/overview.mdx"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "docs/seps/2663-tasks-extension.mdx",
+      "blob_sha": "a035b95d60e3307ea0383633cc19f944aee24630",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/docs/seps/2663-tasks-extension.mdx"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "docs/specification/2026-07-28/server/tools.mdx",
+      "blob_sha": "7813b8c37b83198289fd816063b1e6d3bc727315",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/docs/specification/2026-07-28/server/tools.mdx"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "schema/2026-07-28/schema.ts",
+      "blob_sha": "9b55feeb412bc3ae877f2eac10b5c01ba29a2eed",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/schema/2026-07-28/schema.ts"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "docs/specification/2026-07-28/basic/patterns/mrtr.mdx",
+      "blob_sha": "a66d667094e73a65a202ed512bd4d398676c9287",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/docs/specification/2026-07-28/basic/patterns/mrtr.mdx"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "tests/docs_src/test_handling_errors.py",
+      "blob_sha": "9824d90dc937836aa5c22d4d8378eb42e727beaa",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/tests/docs_src/test_handling_errors.py"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "tests/interaction/lowlevel/test_tools.py",
+      "blob_sha": "86fec356bce6447ba266e8e312f6db9a9db68901",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/tests/interaction/lowlevel/test_tools.py"
+    },
+    {
+      "repository": "modelcontextprotocol/python-sdk",
+      "commit": "d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14",
+      "path": "tests/server/test_lowlevel_tool_annotations.py",
+      "blob_sha": "f80ebd81ef21a2428d3f39623fca1ea4e93e93b3",
+      "url": "https://github.com/modelcontextprotocol/python-sdk/blob/d7845c073a2b9ba5ab2817ecf93d3e45ef24cd14/tests/server/test_lowlevel_tool_annotations.py"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "specification/2026-07-28/tasks.md",
+      "blob_sha": "f312d47dda3cf5939307cf182d53c8670448f10a",
+      "url": "https://github.com/modelcontextprotocol/ext-tasks/blob/b3d28aceaa6d49f5f92258e3d06b61ad6f111e84/specification/2026-07-28/tasks.md"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "packages/ext-tasks/src/client/task-lifecycle-races.test.ts",
+      "blob_sha": "0760147a93132916687100397b2c87cc8b1acfb6",
+      "url": "https://github.com/modelcontextprotocol/ext-tasks/blob/b3d28aceaa6d49f5f92258e3d06b61ad6f111e84/packages/ext-tasks/src/client/task-lifecycle-races.test.ts"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "packages/ext-tasks/src/client/task-resumption.test.ts",
+      "blob_sha": "c875436e52997ba8c2870c77193c65d767c61067",
+      "url": "https://github.com/modelcontextprotocol/ext-tasks/blob/b3d28aceaa6d49f5f92258e3d06b61ad6f111e84/packages/ext-tasks/src/client/task-resumption.test.ts"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "LICENSE",
+      "blob_sha": "83721348b21415bc1cda345305f21d17b9de95e2",
+      "url": "https://github.com/modelcontextprotocol/ext-tasks/blob/b3d28aceaa6d49f5f92258e3d06b61ad6f111e84/LICENSE"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "LICENSE",
+      "blob_sha": "4a93985763241755401a10678395303de4e720ba",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/LICENSE"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "schema/2026-07-28/examples/CallToolResult/invalid-tool-input-error.json",
+      "blob_sha": "59648895c2b8352198b7243cba149cf08142502f",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/schema/2026-07-28/examples/CallToolResult/invalid-tool-input-error.json"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "schema/2026-07-28/examples/CallToolResultResponse/call-tool-result-response.json",
+      "blob_sha": "da4c062ca506badbdf7c56ac970ff7f7e3b76e59",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/schema/2026-07-28/examples/CallToolResultResponse/call-tool-result-response.json"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "schema/2026-07-28/examples/CancelledNotification/user-requested-cancellation.json",
+      "blob_sha": "aa52f8e4c5d8f9e6f646dc24d0426aa30f2c4d9f",
+      "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/84d845729393f79b3fd3d392aa17cb86f5b6f95c/schema/2026-07-28/examples/CancelledNotification/user-requested-cancellation.json"
+    }
+  ],
+  "maintenance_reviewed_at": "2026-10-29T19:44:32.111392+00:00"
+}

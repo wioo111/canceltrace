@@ -1,0 +1,196 @@
+{
+  "checked_at": "2026-10-29T19:49:02.894861+00:00",
+  "method": "Public JSON files and JSON code blocks fetched through GitHub; parsed as data by original local classifier only.",
+  "limitations": "These are official illustrative examples, not production traces. Correlation context is supplied per isolated example; this does not verify real request-response binding. No upstream code executed or vendored.",
+  "cases": [
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "schema/2026-07-28/examples/CallToolResult/invalid-tool-input-error.json",
+      "blob_sha": "59648895c2b8352198b7243cba149cf08142502f",
+      "method": "tools/call",
+      "form": "result",
+      "expected": "tool_error",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "073a0b1078a8b921318cc91cd704067e70c01165647e4d3b9c45664f79fe1e28",
+      "result": {
+        "observation": "tool_error",
+        "business_outcome": "unknown",
+        "tool_is_error": true,
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "schema/2026-07-28/examples/CallToolResultResponse/call-tool-result-response.json",
+      "blob_sha": "da4c062ca506badbdf7c56ac970ff7f7e3b76e59",
+      "method": "tools/call",
+      "form": "message",
+      "expected": "tool_result",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "dba80c897863fc978370b4d856067756a1d566ad91cbaa011f6f6b9e17c8d73f",
+      "result": {
+        "observation": "tool_result",
+        "business_outcome": "unknown",
+        "tool_is_error": false,
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/modelcontextprotocol",
+      "commit": "84d845729393f79b3fd3d392aa17cb86f5b6f95c",
+      "path": "schema/2026-07-28/examples/CancelledNotification/user-requested-cancellation.json",
+      "blob_sha": "aa52f8e4c5d8f9e6f646dc24d0426aa30f2c4d9f",
+      "method": "notifications/cancelled",
+      "form": "message",
+      "expected": "request_cancel_intent",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "13f6643825653461ad0a58ac6947351fbc50eaa3086926714dca091297e78c2d",
+      "result": {
+        "observation": "request_cancel_intent",
+        "business_outcome": "unknown",
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "specification/2026-07-28/tasks.md",
+      "blob_sha": "f312d47dda3cf5939307cf182d53c8670448f10a",
+      "json_code_block_zero_based": 1,
+      "method": "tools/call",
+      "form": "message",
+      "expected": "task_created",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "848a12a86d6469258ce657bbe23d58d3d720ad253a75da08823e59c096bb2c21",
+      "result": {
+        "observation": "task_created",
+        "business_outcome": "unknown",
+        "task_status": "working",
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "specification/2026-07-28/tasks.md",
+      "blob_sha": "f312d47dda3cf5939307cf182d53c8670448f10a",
+      "json_code_block_zero_based": 6,
+      "method": "tasks/get",
+      "form": "message",
+      "expected": "task_working",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "fb61bef85ef3299027e9d6f937b5a5f9a601a748a75b73d61ef41ca2aa069d91",
+      "result": {
+        "observation": "task_working",
+        "business_outcome": "unknown",
+        "task_status": "working",
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "specification/2026-07-28/tasks.md",
+      "blob_sha": "f312d47dda3cf5939307cf182d53c8670448f10a",
+      "json_code_block_zero_based": 8,
+      "method": "tasks/get",
+      "form": "message",
+      "expected": "task_input_required",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "3afcbc86a4221d5e91211025827831f08a69c873719553f11b84b5e3786e5f03",
+      "result": {
+        "observation": "task_input_required",
+        "business_outcome": "unknown",
+        "task_status": "input_required",
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "specification/2026-07-28/tasks.md",
+      "blob_sha": "f312d47dda3cf5939307cf182d53c8670448f10a",
+      "json_code_block_zero_based": 16,
+      "method": "tasks/get",
+      "form": "message",
+      "expected": "task_completed",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "6b6da0b482a327fcb0c014ac076fca00411925a90b926679e15ff2add304e43b",
+      "result": {
+        "observation": "task_completed",
+        "business_outcome": "unknown",
+        "task_status": "completed",
+        "tool_is_error": false,
+        "nested_result_type_present": false,
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "specification/2026-07-28/tasks.md",
+      "blob_sha": "f312d47dda3cf5939307cf182d53c8670448f10a",
+      "json_code_block_zero_based": 17,
+      "method": "tasks/get",
+      "form": "message",
+      "expected": "rpc_error",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "33cda1a7d3f7f42075d21f354437bf35bac3e3039fdc0acc774c4aac23995049",
+      "result": {
+        "observation": "rpc_error",
+        "business_outcome": "unknown",
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "specification/2026-07-28/tasks.md",
+      "blob_sha": "f312d47dda3cf5939307cf182d53c8670448f10a",
+      "json_code_block_zero_based": 19,
+      "method": "tasks/get",
+      "form": "message",
+      "expected": "task_failed",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "cabb415e7599a3dfca0943eae315dfbcf1ba009518f1e9cd2c346ddbf6bc9e8c",
+      "result": {
+        "observation": "task_failed",
+        "business_outcome": "unknown",
+        "task_status": "failed",
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    },
+    {
+      "repository": "modelcontextprotocol/ext-tasks",
+      "commit": "b3d28aceaa6d49f5f92258e3d06b61ad6f111e84",
+      "path": "specification/2026-07-28/tasks.md",
+      "blob_sha": "f312d47dda3cf5939307cf182d53c8670448f10a",
+      "json_code_block_zero_based": 20,
+      "method": "tasks/get",
+      "form": "message",
+      "expected": "task_completed_tool_error",
+      "source_kind": "official_illustrative_example_not_production_trace",
+      "sample_sha256": "983807b2ea561bfc991fd3d84ad659d789271be25c5b5314011b8d19bfa2535e",
+      "result": {
+        "observation": "task_completed_tool_error",
+        "business_outcome": "unknown",
+        "task_status": "completed",
+        "tool_is_error": true,
+        "nested_result_type_present": false,
+        "limit": "Protocol fact only. No operation identity, access classification, effect, or authorization inferred."
+      },
+      "validation": "matched_expected_observation"
+    }
+  ]
+}

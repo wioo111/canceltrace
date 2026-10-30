@@ -1,0 +1,6 @@
+{"type":"dispatch","event_id":"a:d","operation_key":"op","attempt_id":"a","access":"write"}
+{"type":"wait_cancelled","event_id":"a:w","operation_key":"op","attempt_id":"a"}
+{"type":"dispatch","event_id":"b:d","operation_key":"op","attempt_id":"b","access":"write"}
+{"type":"outcome_observed","event_id":"a:o","operation_key":"op","attempt_id":"a","outcome":"no_effect","evidence_id":"a:receipt"}
+{"type":"wait_cancelled","event_id":"b:w","operation_key":"op","attempt_id":"b"}
+{"type":"outcome_observed","event_id":"b:o","operation_key":"op","attempt_id":"b","outcome":"committed","evidence_id":"b:receipt","effect_id":"shared-effect"}

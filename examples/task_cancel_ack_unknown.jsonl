@@ -1,0 +1,8 @@
+{"event_id":"d1","operation_key":"synthetic-task-operation","type":"dispatch","attempt_id":"write-1","access":"write"}
+{"event_id":"p1","operation_key":"synthetic-task-operation","type":"protocol_observed","attempt_id":"write-1","observation":"task_created","evidence_id":"synthetic-wire-1"}
+{"event_id":"c1","operation_key":"synthetic-task-operation","type":"cancel_requested","attempt_id":"write-1"}
+{"event_id":"p2","operation_key":"synthetic-task-operation","type":"protocol_observed","attempt_id":"write-1","observation":"task_cancel_ack","evidence_id":"synthetic-wire-2"}
+{"event_id":"w1","operation_key":"synthetic-task-operation","type":"wait_cancelled","attempt_id":"write-1"}
+{"event_id":"q1","operation_key":"synthetic-task-operation","type":"dispatch","attempt_id":"query-1","access":"read"}
+{"event_id":"p3","operation_key":"synthetic-task-operation","type":"protocol_observed","attempt_id":"query-1","observation":"task_completed_tool_error","evidence_id":"synthetic-wire-3"}
+{"event_id":"q2","operation_key":"synthetic-task-operation","type":"read_completed","attempt_id":"query-1"}

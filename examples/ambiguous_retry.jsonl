@@ -1,0 +1,3 @@
+{"event_id":"d1","operation_key":"synthetic-order","type":"dispatch","attempt_id":"attempt-1","access":"write"}
+{"event_id":"w1","operation_key":"synthetic-order","type":"wait_cancelled","attempt_id":"attempt-1"}
+{"event_id":"d2","operation_key":"synthetic-order","type":"dispatch","attempt_id":"attempt-2","access":"write"}

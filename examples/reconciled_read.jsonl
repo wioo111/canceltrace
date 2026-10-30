@@ -1,0 +1,7 @@
+{"event_id":"g1","operation_key":"synthetic-order","type":"authorization_granted","epoch":1}
+{"event_id":"d1","operation_key":"synthetic-order","type":"dispatch","attempt_id":"attempt-1","access":"write","authorization_epoch":1}
+{"event_id":"w1","operation_key":"synthetic-order","type":"wait_cancelled","attempt_id":"attempt-1"}
+{"event_id":"r1","operation_key":"synthetic-order","type":"authorization_revoked","epoch":1}
+{"event_id":"q1","operation_key":"synthetic-order","type":"dispatch","attempt_id":"query-1","access":"read"}
+{"event_id":"o1","operation_key":"synthetic-order","type":"outcome_observed","attempt_id":"attempt-1","outcome":"committed","evidence_id":"receipt-1","effect_id":"effect-1"}
+{"event_id":"q2","operation_key":"synthetic-order","type":"read_completed","attempt_id":"query-1"}
